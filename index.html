@@ -1070,6 +1070,8 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
             border: 1px solid #e2e8f0;
             animation: modalSlideIn 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
         }
 
         @keyframes modalSlideIn {
@@ -1091,6 +1093,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
         }
 
         .modal-header h3 {
@@ -1311,8 +1316,11 @@
             }
 
             .modal-content {
-                width: 95%;
-                margin: 5% auto;
+                width: 100%;
+                height: 100vh;
+                max-height: 100vh;
+                margin: 0;
+                border-radius: 0;
             }
 
             .report-container {
